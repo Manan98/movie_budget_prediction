@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles/all.css" media="all" />
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/all.js"></script>
+
+  <title>FilmFam</title>
+</head>
+
+<body>
+<div id = "logo">
+<img alt="logo" src="images/logo.jpg" />
+</div>
+<div>
+  <h1>FilmFam</h1>
+</div>
+  <div id="movie-form">
+
+    <form action = "http://127.0.0.1:5010/get_data" method = "post">
+    <div id = "genreType">
+      <label for="genre">
+        <span>Genre: </span>
+        <select id="genre" name="genre">
+          <option value="select">--select--</option>
+          <option value="adventure">Adventure</option>
+          <option value="animation">Animation</option>
+          <option value="comedy">Comedy</option>
+          <option value="crime">Crime</option>
+          <option value="documentary">Documentary</option>
+          <option value="drama">Drama</option>
+          <option value="family">Family</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="history">History</option>
+          <option value="horror">Horror</option>
+          <option value="music">Music</option>
+          <option value="mystery">Mystery</option>
+          <option value="romance">Romance</option>
+          <option value="fiction">Science Fiction</option>
+          <option value="tv">TV Movie</option>
+          <option value="thriller">Thriller</option>
+          <option value="war">War</option>
+          <option value="western">Western</option>
+        </select>
+      </label>
+    </div>
+    <div id ="predictedScore">
+        Predicted Score on IMDb(0-10):
+        <input type="text" name="predictedScore">
+    </div>
+    <div id ="runtime">
+        Total Runtime(0-240):
+        <input type="text" name="runtime">
+    </div>
+    <div id ="revenue">
+        Total Revenue(0-9999999999):
+        <input type="text" name="revenue">
+    </div>
+<button type="submit" onclick="loadDoc()">
+Submit
+</button>
+<!-- <div>
+ <input type="submit" value="Submit">
+</div> -->
+</form>
+  </div>
+
+</body>
+
+</html>
